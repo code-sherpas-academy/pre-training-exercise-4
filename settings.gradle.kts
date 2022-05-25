@@ -7,5 +7,5 @@
  * in the user manual at https://docs.gradle.org/7.3.3/userguide/multi_project_builds.html
  */
 
-rootProject.name = "sample"
+rootProject.name = "pre-training-exercise-4"
 include("lib")
