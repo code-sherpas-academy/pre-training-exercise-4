@@ -24,13 +24,13 @@ class SpaceshipTest {
     fun `spaceship throws exception when health is over 100`() {
         val exception = Assertions.catchThrowable { Spaceship(health = 110) }
 
-        assertThat(exception).isExactlyInstanceOf(MaxHealthException::class.java)
+        assertThat(exception).isExactlyInstanceOf(HealthOutOfRangeException::class.java)
     }
 
     @Test
     fun `spaceship throws exception when health is below 0`() {
         val exception = Assertions.catchThrowable { Spaceship(health = -10) }
 
-        assertThat(exception).isExactlyInstanceOf(MinHealthException::class.java)
+        assertThat(exception).isExactlyInstanceOf(HealthOutOfRangeException::class.java)
     }
 }
