@@ -1,6 +1,7 @@
 package sample
 
 import org.assertj.core.api.Assertions.assertThat
+import org.assertj.core.api.Assertions.catchThrowable
 import org.junit.jupiter.api.Test
 
 
@@ -12,6 +13,12 @@ class SpaceshipTest {
         val target = Spaceship(5, "B")
         spaceship.shootAt(target)
         assertThat(target.getHealth()).isEqualTo(4)
+    }
+
+    @Test
+    fun `fail when attempting to create spaceship with health below 0`() {
+        val exception: Throwable = catchThrowable { Spaceship(-3, "Cris") }
+        assertThat(exception).isExactlyInstanceOf(InvalidHealthParameterException::class.java)
     }
 
 }

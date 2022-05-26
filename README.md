@@ -14,7 +14,9 @@ Como _Game Master_ quiero poder hacer que una nave cualquiera `A` dispare a otra
 
 ## Feature 4
 
-Como _Game Master_ quiero que el `health` de las naves no pueda ser negativo. Dicho de otra manera, el `health` nunca podrá decrementar por debajo de 0. Tampoco podrán crearse naves con `health` negativo.
+Como _Game Master_ quiero que el `health` de las naves no pueda ser negativo. 
+Dicho de otra manera, el `health` nunca podrá decrementar por debajo de 0. 
+Tampoco podrán crearse naves con `health` negativo.
 
 ## Feature 5
 

@@ -5,6 +5,10 @@ class Spaceship(health: Int, name: String) {
     private var health: Int = health
     private var name: String = name
 
+    init {
+        if(health < 0) throw InvalidHealthParameterException(health)
+    }
+
     fun getHealth(): Int {
         return health
     }
