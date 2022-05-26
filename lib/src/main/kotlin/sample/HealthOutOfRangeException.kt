@@ -1,5 +1,3 @@
 package sample
 
-class HealthOutOfRangeException : Throwable() {
-
-}
+class HealthOutOfRangeException : RuntimeException("Health is out of range (0,100)")
