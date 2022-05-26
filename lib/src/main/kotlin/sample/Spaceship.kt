@@ -7,4 +7,8 @@ class Spaceship(health: Int) {
     fun getHealth(): Int {
         return health
     }
+
+    fun isAlive(): Boolean {
+        return health > 0
+    }
 }
