@@ -6,12 +6,6 @@ import org.junit.jupiter.api.Test
 
 
 class SpaceshipTest {
-    @Test
-    fun `spaceship is created`() {
-        val spaceship = Spaceship(health = 90)
-
-        assertThat(spaceship).isNotNull
-    }
 
     @Test
     fun `spaceship sets health correctly`() {
