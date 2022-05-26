@@ -21,4 +21,14 @@ class SpaceshipTest {
         assertThat(exception).isExactlyInstanceOf(InvalidHealthParameterException::class.java)
     }
 
+    @Test
+    fun `if spaceship is not alive, then cannot shoot`() {
+        val spaceship = Spaceship(0,"A")
+        val target = Spaceship(5, "B")
+
+        val exception = catchThrowable { spaceship.shootAt(target) }
+
+        assertThat(exception).isExactlyInstanceOf(DeadSpaceshipException::class.java)
+    }
+
 }

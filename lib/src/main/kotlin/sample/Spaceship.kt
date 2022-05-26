@@ -22,6 +22,8 @@ class Spaceship(health: Int, name: String) {
     }
 
     fun shootAt(target: Spaceship) {
-        if(target.isAlive()) target.health--
+        if(this.isAlive()) {
+            if(target.isAlive()) target.health--
+        } else throw DeadSpaceshipException()
     }
 }
