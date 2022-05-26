@@ -16,4 +16,8 @@ class Spaceship(health: Int, name: String) {
     fun isAlive(): Boolean {
         return health > 0
     }
+
+    fun shootAt(target: Spaceship) {
+        if(target.isAlive()) target.health--
+    }
 }
